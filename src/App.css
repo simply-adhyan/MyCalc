@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance:none;margin:0
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  
+*{
+  box-sizing:border-box
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  padding:20px
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container{
+  border:5px solid #111;
+  border-radius:12px;
+  margin:0 auto;
+  max-width:400px;
 }
-
-.App-link {
-  color: #61dafb;
+.input-element:focus{
+  border:none;
+  outline:none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-element.small{
+  color:#333;
+  font-size:20px;
+  font-weight:lighter;
+  padding:2px;
+}
+.input-element,
+.input-element.small{
+  background:none;
+  border:none;
+  box-shadow:none;
+  width:100%;
+}.input-element{
+  color:#000;
+  font-size:40px;
+  font-weight:700;
+  padding:20px;
+  text-align:right;
+}
+.calcbutt{
+  border-top:2px solid #010101;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(5,1fr)
+}
+.custom-button{
+  background-color:#000;
+  border:2px solid gold;
+  border-radius:50%;
+  color:gold;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:700;
+  margin:8px;
+  padding:25px;
+  transition:background-color .3s,color .3s;
+}
+.custom-button:hover{
+  background-color:gold;
+  color:#000
+}
+.result{
+  display:none
+}
+.result.big{
+  background:none;
+  border:none;
+  box-shadow:none;
+  color:#000;
+  display:block;
+  font-size:32px;
+  font-weight:700;
+  padding:5px;
+  text-align:right;
+  width:100%
 }
